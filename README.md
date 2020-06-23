@@ -1,1 +1,1 @@
-# Furniture-Manufacturer
+# Furniture Manufacturer
