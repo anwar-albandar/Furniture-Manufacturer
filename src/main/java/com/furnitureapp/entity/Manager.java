@@ -43,6 +43,4 @@ public class Manager extends Employee{
         System.out.println(m.toString());
     }
 
-
-
 }

@@ -1,8 +1,5 @@
 package com.furnitureapp.entity;
 
-import java.util.Locale;
-
-// TODO
 public abstract class Employee {
 
     private String employeeCode;
@@ -108,12 +105,6 @@ public abstract class Employee {
             return this;
         }
 
-        /*public Employee build(){
-            return new Employee(this);
-        }*/
     }
-
-
-
 
 }
