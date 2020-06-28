@@ -1,16 +1,13 @@
 package com.furnitureapp.entity;
 
-import java.util.Locale;
-
-// TODO
 public abstract class Employee {
 
-    private String employeeCode;
+    private int employeeCode;
     private String fullName;
     private String address;
     private String emailAddress;
-    private long phone;
-    private int passCode;
+    private String phone;
+    private String password;
     private Job job;
 
 
@@ -20,11 +17,11 @@ public abstract class Employee {
         this.address = builder.address;
         this.emailAddress = builder.emailAddress;
         this.phone = builder.phone;
-        this.passCode = builder.passCode;
+        this.password = builder.password;
         this.job = builder.job;
     }
 
-    public String getEmployeeCode() {
+    public int getEmployeeCode() {
         return employeeCode;
     }
 
@@ -40,12 +37,12 @@ public abstract class Employee {
         return emailAddress;
     }
 
-    public long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public int getPassCode(){
-        return passCode;
+    public String getPassword(){
+        return password;
     }
 
     public Job getJob(){
@@ -60,21 +57,20 @@ public abstract class Employee {
                 ", address='" + address + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +
                 ", phone=" + phone +
-                ", passCode=" + passCode +
                 ", job=" + job +
                 '}';
     }
 
     public static class EmployeeBuilder{
-        private String employeeCode;
+        private int employeeCode;
         private String fullName;
         private String address;
         private String emailAddress;
-        private long phone;
-        private int passCode;
+        private String phone;
+        private String password;
         private Job job;
 
-        public EmployeeBuilder setEmployeeCode(String employeeCode) {
+        public EmployeeBuilder setEmployeeCode(int employeeCode) {
             this.employeeCode = employeeCode;
             return this;
         }
@@ -94,13 +90,13 @@ public abstract class Employee {
             return this;
         }
 
-        public EmployeeBuilder setPhone(long phone) {
+        public EmployeeBuilder setPhone(String phone) {
             this.phone = phone;
             return this;
         }
 
-        public EmployeeBuilder setPassCode(int passCode){
-            this.passCode = passCode;
+        public EmployeeBuilder setPassword(String password){
+            this.password = password;
             return this;
         }
 
@@ -109,23 +105,6 @@ public abstract class Employee {
             return this;
         }
 
-        public EmployeeBuilder copy(Employee employee){
-            this.employeeCode = employee.employeeCode;
-            this.fullName = employee.fullName;
-            this.address = employee.address;
-            this.emailAddress = employee.emailAddress;
-            this.phone = employee.phone;
-            this.passCode = employee.passCode;
-            this.job = employee.job;
-            return this;
-        }
-
-        /*public Employee build(){
-            return new Employee(this);
-        }*/
     }
-
-
-
 
 }
