@@ -7,6 +7,7 @@ public class Product {
     private double price;
     private double size;
     private String description;
+    private ProductCategory category ;
 
     private Product(Builder builder) {
         this.productCode = builder.productCode;
@@ -14,6 +15,7 @@ public class Product {
         this.price = builder.price;
         this.size = builder.size;
         this.description = builder.description;
+        this.category = builder.category;
 
     }
 
@@ -37,6 +39,10 @@ public class Product {
         return description;
     }
 
+    public ProductCategory getCategory() {
+        return category;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -55,6 +61,7 @@ public class Product {
         private double price;
         private double size;
         private String description;
+        private ProductCategory category;
 
         public Builder setProductCode(int productCode) {
             this.productCode = productCode;
@@ -81,12 +88,18 @@ public class Product {
             return this;
         }
 
+        public Builder setCategory( ProductCategory category) {
+            this.category = category;
+            return this;
+        }
+
         public Builder copy(Product product) {
             this.productCode = product.productCode;
             this.name = product.name;
             this.price = product.price;
             this.size = product.size;
             this.description = product.description;
+            this.category = product.category;
             return this;
         }
 
