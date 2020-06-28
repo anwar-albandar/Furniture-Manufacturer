@@ -1,13 +1,16 @@
 package com.furnitureapp.entity;
 
+import java.util.Locale;
+
+// TODO
 public abstract class Employee {
 
-    private int employeeCode;
+    private String employeeCode;
     private String fullName;
     private String address;
     private String emailAddress;
     private String phone;
-    private String password;
+    private String passCode;
     private Job job;
 
 
@@ -17,11 +20,11 @@ public abstract class Employee {
         this.address = builder.address;
         this.emailAddress = builder.emailAddress;
         this.phone = builder.phone;
-        this.password = builder.password;
+        this.passCode = builder.passCode;
         this.job = builder.job;
     }
 
-    public int getEmployeeCode() {
+    public String getEmployeeCode() {
         return employeeCode;
     }
 
@@ -41,8 +44,8 @@ public abstract class Employee {
         return phone;
     }
 
-    public String getPassword(){
-        return password;
+    public String getPassCode(){
+        return passCode;
     }
 
     public Job getJob(){
@@ -62,15 +65,15 @@ public abstract class Employee {
     }
 
     public static class EmployeeBuilder{
-        private int employeeCode;
+        private String employeeCode;
         private String fullName;
         private String address;
         private String emailAddress;
         private String phone;
-        private String password;
+        private String passCode;
         private Job job;
 
-        public EmployeeBuilder setEmployeeCode(int employeeCode) {
+        public EmployeeBuilder setEmployeeCode(String employeeCode) {
             this.employeeCode = employeeCode;
             return this;
         }
@@ -95,8 +98,8 @@ public abstract class Employee {
             return this;
         }
 
-        public EmployeeBuilder setPassword(String password){
-            this.password = password;
+        public EmployeeBuilder setPassCode(String passCode){
+            this.passCode = passCode;
             return this;
         }
 
@@ -105,6 +108,12 @@ public abstract class Employee {
             return this;
         }
 
+        /*public Employee build(){
+            return new Employee(this);
+        }*/
     }
+
+
+
 
 }
