@@ -51,9 +51,9 @@ public class Product {
                 ", price=" + price +
                 ", size=" + size +
                 ", description='" + description + '\'' +
+                ", category=" + category +
                 '}';
     }
-
 
     public static class Builder {
         private int productCode;
