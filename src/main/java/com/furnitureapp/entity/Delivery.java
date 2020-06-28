@@ -1,15 +1,14 @@
 package com.furnitureapp.entity;
 
-import java.util.Date;
 
 public class Delivery {
     private int deliveryCode;
     private int saleCode;
     private int employeeCode;
     private String deliveryAddress;
-    private Date dateTimeReceived;
-    private Date dateTimeSet;
-    private String trackingNum;
+    private String dateTimeReceived;
+    private String dateTimeSet;
+    private int trackingNum;
     private boolean deliveryStatus;
 
     public Delivery(DeliveryBuilder deliveryBuilder){
@@ -39,15 +38,15 @@ public class Delivery {
         return deliveryAddress;
     }
 
-    public Date getDateTimeReceived() {
+    public String getDateTimeReceived() {
         return dateTimeReceived;
     }
 
-    public Date getDateTimeSet() {
+    public String getDateTimeSet() {
         return dateTimeSet;
     }
 
-    public String getTrackingNum() {
+    public int getTrackingNum() {
         return trackingNum;
     }
 
@@ -60,9 +59,9 @@ public class Delivery {
         private int saleCode;
         private int employeeCode;
         private String deliveryAddress;
-        private Date dateTimeReceived;
-        private Date dateTimeSet;
-        private String trackingNum;
+        private String dateTimeReceived;
+        private String dateTimeSet;
+        private int trackingNum;
         private boolean deliveryStatus;
 
         public DeliveryBuilder(){}
@@ -87,17 +86,17 @@ public class Delivery {
             return this;
         }
 
-        public DeliveryBuilder setDateTimeReceived(Date dateTimeReceived) {
+        public DeliveryBuilder setDateTimeReceived(String dateTimeReceived) {
             this.dateTimeReceived = dateTimeReceived;
             return this;
         }
 
-        public DeliveryBuilder setDateTimeSet(Date dateTimeSet) {
+        public DeliveryBuilder setDateTimeSet(String dateTimeSet) {
             this.dateTimeSet = dateTimeSet;
             return this;
         }
 
-        public DeliveryBuilder setTrackingNum(String trackingNum) {
+        public DeliveryBuilder setTrackingNum(int trackingNum) {
             this.trackingNum = trackingNum;
             return this;
         }
