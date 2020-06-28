@@ -102,12 +102,12 @@ public class Promotion {
 
         //Copy of the class Promotion
         public PromotionBuilder copy(Promotion promotion){
-            this.prodTitle = prodTitle;
-            this.startDate = startDate;
-            this.endDate = endDate;
-            this.description = description;
-            this.season = season;
-            this.year = year;
+            this.prodTitle = promotion.prodTitle;
+            this.startDate = promotion.startDate;
+            this.endDate = promotion.endDate;
+            this.description = promotion.description;
+            this.season = promotion.season;
+            this.year = promotion.year;
             return this;
         }
 

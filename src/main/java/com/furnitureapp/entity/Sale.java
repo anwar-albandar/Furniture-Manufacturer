@@ -64,9 +64,9 @@ public class Sale{
 
         //create a copy of the sale object in the builder pattern
         public SaleBuilder copy(Sale sale){
-            this.saleCode = saleCode;
-            this.totAmt = totAmt;
-            this.saleTime= saleTime;
+            this.saleCode = sale.saleCode;
+            this.totAmt = sale.totAmt;
+            this.saleTime= sale.saleTime;
             return this;
         }
 

@@ -62,9 +62,9 @@ public class Cart {
 
         //Copy of the class Cart
         public CartBuilder copy(Cart cart){
-            this.saleCode = saleCode;
-            this.numbItmes = numbItmes;
-            this.total = total;
+            this.saleCode = cart.saleCode;
+            this.numbItmes = cart.numbItmes;
+            this.total = cart.total;
             return this;
         }
 

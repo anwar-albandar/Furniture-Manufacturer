@@ -44,8 +44,8 @@ public class SaleCategory {
 
         //copy of the class SaleCategory
         public SaleCategoryBuilder copy(SaleCategory saleCategory){
-            this.saleCatTitle = saleCatTitle;
-            this.saleCatDesc = saleCatDesc;
+            this.saleCatTitle = saleCategory.saleCatTitle;
+            this.saleCatDesc = saleCategory.saleCatDesc;
             return this;
         }
 

@@ -50,9 +50,9 @@ public class SaleProduct {
 
         //Copy of the class SaleProduct
         public SaleProductBuilder copy(SaleProduct saleProduct){
-            this.saleCode = saleCode;
-            this.prodCode = prodCode;
-            this.quantity = quantity;
+            this.saleCode = saleProduct.saleCode;
+            this.prodCode = saleProduct.prodCode;
+            this.quantity = saleProduct.quantity;
             return this;
         }
 
