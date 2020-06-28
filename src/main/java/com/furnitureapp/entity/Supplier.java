@@ -74,10 +74,10 @@ public class Supplier {
 
         //Copy of the class Supplier
         public SupplierBuilder copy(Supplier supplier){
-            this.name = name;
-            this.phone = phone;
-            this.email = email;
-            this.address = address;
+            this.name = supplier.name;
+            this.phone = supplier.phone;
+            this.email = supplier.email;
+            this.address = supplier.address;
             return this;
         }
 
