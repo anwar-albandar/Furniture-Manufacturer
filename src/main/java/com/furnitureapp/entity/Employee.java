@@ -1,16 +1,13 @@
 package com.furnitureapp.entity;
 
-import java.util.Locale;
-
-// TODO
 public abstract class Employee {
 
     private String employeeCode;
     private String fullName;
     private String address;
     private String emailAddress;
-    private long phone;
-    private int passCode;
+    private String phone;
+    private String passCode;
     private Job job;
 
 
@@ -40,11 +37,11 @@ public abstract class Employee {
         return emailAddress;
     }
 
-    public long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public int getPassCode(){
+    public String getPassCode(){
         return passCode;
     }
 
@@ -60,7 +57,6 @@ public abstract class Employee {
                 ", address='" + address + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +
                 ", phone=" + phone +
-                ", passCode=" + passCode +
                 ", job=" + job +
                 '}';
     }
@@ -70,8 +66,8 @@ public abstract class Employee {
         private String fullName;
         private String address;
         private String emailAddress;
-        private long phone;
-        private int passCode;
+        private String phone;
+        private String passCode;
         private Job job;
 
         public EmployeeBuilder setEmployeeCode(String employeeCode) {
@@ -94,12 +90,12 @@ public abstract class Employee {
             return this;
         }
 
-        public EmployeeBuilder setPhone(long phone) {
+        public EmployeeBuilder setPhone(String phone) {
             this.phone = phone;
             return this;
         }
 
-        public EmployeeBuilder setPassCode(int passCode){
+        public EmployeeBuilder setPassCode(String passCode){
             this.passCode = passCode;
             return this;
         }
@@ -109,23 +105,6 @@ public abstract class Employee {
             return this;
         }
 
-        public EmployeeBuilder copy(Employee employee){
-            this.employeeCode = employee.employeeCode;
-            this.fullName = employee.fullName;
-            this.address = employee.address;
-            this.emailAddress = employee.emailAddress;
-            this.phone = employee.phone;
-            this.passCode = employee.passCode;
-            this.job = employee.job;
-            return this;
-        }
-
-        /*public Employee build(){
-            return new Employee(this);
-        }*/
     }
-
-
-
 
 }
